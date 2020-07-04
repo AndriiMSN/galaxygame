@@ -1,0 +1,39 @@
+:root {
+  --unit: 1px;
+  --value-size: 30;
+  --size-cell: calc(var(--value-size) * var(--unit));
+  --value-count: 20;
+  --mult-size: calc(var(--value-count) * var(--size-cell));
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+}
+.game {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  border: 3px solid white;
+  height: var(--mult-size);
+  width: var(--mult-size);
+}
+.game div {
+  width: var(--size-cell);
+  height: var(--size-cell);
+}
+.enemy {
+  background-color: red;
+  border-radius: 50%;
+}
+.player {
+  background-color: lightcoral;
+  border-radius: 50% 50% 50% 50% / 100% 100% 0 0;
+}
+.bullet {
+  background: yellow;
+}
